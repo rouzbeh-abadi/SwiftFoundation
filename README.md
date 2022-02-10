@@ -1,5 +1,3 @@
 # SwiftFoundation
 
-A description of this package.
-# SwiftFoundation
-# SwiftFoundation
+Swift package that contains foundation models for iOS projects
