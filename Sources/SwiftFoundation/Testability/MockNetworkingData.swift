@@ -1,6 +1,6 @@
 
 import Foundation
-import XCTest
+//import XCTest
 
 public struct MockNetworkingData: Equatable {
     
@@ -65,9 +65,9 @@ public struct MockNetworkingData: Equatable {
     public var cacheStoragePolicy: URLCache.StoragePolicy = .notAllowed
     public var completion: (() -> Void)?
     public var onRequest: OnRequest?
-    var onRequestExpectation: XCTestExpectation?
-
-    var onCompletedExpectation: XCTestExpectation?
+//    var onRequestExpectation: XCTestExpectation?
+//
+//    var onCompletedExpectation: XCTestExpectation?
     
     private init(url: URL? = nil, ignoreQuery: Bool = false, cacheStoragePolicy: URLCache.StoragePolicy = .notAllowed, dataType: DataType, statusCode: Int, data: [HTTPMethod: Data], requestError: Error? = nil, additionalHeaders: [String: String] = [:], fileExtensions: [String]? = nil) {
         urlToMock = url
