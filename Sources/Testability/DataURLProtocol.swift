@@ -1,5 +1,6 @@
 
 import Foundation
+import XCTest
 
 public final class DataURLProtocol: URLProtocol {
     
@@ -37,7 +38,7 @@ public final class DataURLProtocol: URLProtocol {
         if let onRequest = mock.onRequest {
             onRequest(request, request.postBodyArguments)
         }
-//        mock.onRequestExpectation?.fulfill()
+        mock.onRequestExpectation?.fulfill()
         
         guard let delay = mock.delay else {
             finishRequest(for: mock, data: data, response: response)
@@ -64,7 +65,7 @@ public final class DataURLProtocol: URLProtocol {
         }
         
         mock.completion?()
-//        mock.onCompletedExpectation?.fulfill()
+        mock.onCompletedExpectation?.fulfill()
     }
     
     /// Implementation does nothing, but is needed for a valid inheritance of URLProtocol.
