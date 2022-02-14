@@ -9,7 +9,7 @@ public class ReusableCollectionViewCell<T: UIView>: UICollectionViewCell {
     public let view: T
     
     public override init(frame: CGRect) {
-        view = T().autoLayoutView()()
+        view = T().autoLayoutView()
         super.init(frame: frame)
         setPinnedToMargins(false)
     }
