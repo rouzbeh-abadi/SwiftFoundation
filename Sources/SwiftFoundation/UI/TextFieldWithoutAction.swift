@@ -1,6 +1,7 @@
 
 #if !os(macOS)
 import Foundation
+import UIKit
 
 open class TextFieldWithoutAction: UITextField {
     override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
