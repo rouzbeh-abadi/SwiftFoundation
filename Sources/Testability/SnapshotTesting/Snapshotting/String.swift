@@ -13,7 +13,7 @@ extension Diffing where Value == String {
     fromData: { String(decoding: $0, as: UTF8.self) }
   ) { old, new in
     guard old != new else { return nil }
-    let hunks = chunk(diff: SnapshotTesting.diff(
+      let hunks = chunk(diff: Testability.diff(
       old.split(separator: "\n", omittingEmptySubsequences: false).map(String.init),
       new.split(separator: "\n", omittingEmptySubsequences: false).map(String.init)
     ))
@@ -24,3 +24,6 @@ extension Diffing where Value == String {
     return (failure, [attachment])
   }
 }
+
+
+

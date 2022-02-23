@@ -3,7 +3,7 @@
 import Foundation
 import UIKit
 
-public protocol ReusableView: class {
+public protocol ReusableView: AnyObject {
     
     static var reusableViewID: String { get }
 }
