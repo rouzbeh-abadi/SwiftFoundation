@@ -17,11 +17,12 @@ let package = Package(
             targets: ["Testability"]),
     ],
     dependencies: [
+        .package(name: "NotificationBannerSwift", url: "https://github.com/Daltron/NotificationBanner", from: "3.0.6")
     ],
     targets: [
         .target(
             name: "SwiftFoundation",
-            dependencies: []),
+            dependencies: ["NotificationBannerSwift"]),
         .target(                            
             name: "Testability",
             dependencies: []),
