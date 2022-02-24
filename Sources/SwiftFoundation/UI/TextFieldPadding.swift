@@ -1,5 +1,6 @@
 
 import Foundation
+import UIKit
 
 public class UITextFieldPadding: UITextField {
     
