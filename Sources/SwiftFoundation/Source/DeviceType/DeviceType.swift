@@ -8,15 +8,15 @@ public struct DeviceType {
     public static let isPad = UIDevice.current.userInterfaceIdiom == .pad
     
     //iPhones
-    public static var isPhone5OrLess: Bool {
-        return DeviceType.isPhone && ScreenSize.maxLength <= 568.0 // Smallest screen we support.
+    public static var isPhoneSE1: Bool {
+        return DeviceType.isPhone && ScreenSize.maxLength <= 568.0
     }
     
-    public static var isPhone6Or7: Bool {
+    public static var isPhone8: Bool {
         return DeviceType.isPhone && ScreenSize.maxLength == 667.0
     }
     
-    public static var isPhone6POr7P: Bool {
+    public static var isPhone8P: Bool {
         return DeviceType.isPhone && ScreenSize.maxLength == 736.0
     }
     
@@ -28,20 +28,29 @@ public struct DeviceType {
         return DeviceType.isPhone && ScreenSize.maxLength == 896.0
     }
     
+    public static var isPhone13ProMax: Bool {
+        return DeviceType.isPhone && ScreenSize.maxLength == 926.0
+    }
+    
     //iPads
-    public static var isPadProBig: Bool {
+    
+    public static var isPadMini_6th: Bool {
+        return DeviceType.isPad && ScreenSize.maxLength == 1133.0
+    }
+    
+    public static var isPadPro12_9: Bool {
         return DeviceType.isPad && ScreenSize.maxLength == 1366.0
     }
     
-    public static var isPadMiniORAir: Bool {
+    public static var isPad9_7: Bool {
         return DeviceType.isPad && ScreenSize.maxLength == 1024.0
     }
     
-    public static var isPadPro105: Bool {
+    public static var isPad10_5: Bool {
         return DeviceType.isPad && ScreenSize.maxLength == 1112.0
     }
     
-    public static var isPadPro11: Bool {
+    public static var isPad_11: Bool {
         return DeviceType.isPad && ScreenSize.maxLength == 1194.0
     }
 }
