@@ -1,5 +1,6 @@
 
 import Foundation
+import UIKit
 
 extension Snapshotting where Value: UIViewController, Format == UIImage {
     public static var windowedImage: Snapshotting {
