@@ -89,5 +89,29 @@ extension UIButton {
             imageEdgeInsets = UIEdgeInsets(top: imageEdgeInsets.top, left: 0, bottom: imageEdgeInsets.bottom, right: padding)
         }
     }
+    
+    public func loadingIndicator(_ show: Bool, title: String, color: UIColor) {
+        let tag = 808404
+        if show {
+            self.isEnabled = false
+            self.setTitle("", for: .normal)
+            let indicator = UIActivityIndicatorView()
+            let buttonHeight = self.bounds.size.height
+            let buttonWidth = self.bounds.size.width
+            indicator.center = CGPoint(x: buttonWidth/2, y: buttonHeight/2)
+            indicator.color = color
+            indicator.tag = tag
+            self.addSubview(indicator)
+            indicator.startAnimating()
+        } else {
+            self.setTitle(title, for: .normal)
+            self.isEnabled = true
+            self.alpha = 1.0
+            if let indicator = self.viewWithTag(tag) as? UIActivityIndicatorView {
+                indicator.stopAnimating()
+                indicator.removeFromSuperview()
+            }
+        }
+    }
 }
 #endif
