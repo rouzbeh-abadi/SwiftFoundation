@@ -1,11 +1,7 @@
-//
-//  File.swift
-//  
-//
-//  Created by Rouzbeh on 25.02.22.
-//
-
 import Foundation
+
+
+public let haptic = UIImpactFeedbackGenerator()
 
 /// Check email that has a valid format
 /// - Parameter email: the email
