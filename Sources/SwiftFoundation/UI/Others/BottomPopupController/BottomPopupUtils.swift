@@ -3,7 +3,7 @@ import UIKit
 
 typealias BottomPresentableViewController = BottomPopupAttributesDelegate & UIViewController
 
-public protocol BottomPopupDelegate: class {
+public protocol BottomPopupDelegate: AnyObject {
     func bottomPopupViewLoaded()
     func bottomPopupWillAppear()
     func bottomPopupDidAppear()
@@ -21,7 +21,7 @@ public extension BottomPopupDelegate {
     func bottomPopupDismissInteractionPercentChanged(from oldValue: CGFloat, to newValue: CGFloat) { }
 }
 
-public protocol BottomPopupAttributesDelegate: class {
+public protocol BottomPopupAttributesDelegate: AnyObject {
     var popupHeight: CGFloat { get }
     var popupTopCornerRadius: CGFloat { get }
     var popupPresentDuration: Double { get }
@@ -33,14 +33,14 @@ public protocol BottomPopupAttributesDelegate: class {
 }
 
 public enum BottomPopupConstants {
-    static let minPercentOfVisiblePartToCompleteAnimation: CGFloat = 0.5
-    static let swipeDownThreshold: CGFloat = 1000
-    static let defaultHeight: CGFloat = 377.0
-    static let defaultTopCornerRadius: CGFloat = 10.0
-    static let defaultPresentDuration = 0.5
-    static let defaultDismissDuration = 0.5
-    static let dismissInteractively = true
-    static let shouldBeganDismiss = true
-    static let dimmingViewDefaultAlphaValue: CGFloat = 0.5
-    static let defaultPopupViewAccessibilityIdentifier: String = "bottomPopupView"
+    public static let minPercentOfVisiblePartToCompleteAnimation: CGFloat = 0.5
+    public static let swipeDownThreshold: CGFloat = 1000
+    public static let defaultHeight: CGFloat = 377.0
+    public static let defaultTopCornerRadius: CGFloat = 10.0
+    public static let defaultPresentDuration = 0.5
+    public static let defaultDismissDuration = 0.5
+    public static let dismissInteractively = true
+    public static let shouldBeganDismiss = true
+    public static let dimmingViewDefaultAlphaValue: CGFloat = 0.5
+    public static let defaultPopupViewAccessibilityIdentifier: String = "bottomPopupView"
 }
