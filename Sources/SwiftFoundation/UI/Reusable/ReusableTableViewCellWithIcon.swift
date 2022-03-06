@@ -26,7 +26,7 @@ extension ReusableTableViewCellWithIcon {
     ///   - accentColor: The accent color of the icon
     ///   - titleColor: The color  of the title label
     ///   - fontSize: The font size of the title label
-    func configure(icon: UIImage, title: String, accentColor: UIColor, titleColor: UIColor, fontSize: CGFloat) {
+    public func configure(icon: UIImage, title: String, accentColor: UIColor, titleColor: UIColor, fontSize: CGFloat) {
         titleLabel.text = title
         iconImage.image = icon
         iconImage.tintColor = tintColor
